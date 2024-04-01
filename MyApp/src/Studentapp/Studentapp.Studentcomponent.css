@@ -1,0 +1,82 @@
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: gold;
+    background-color: black;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.head{
+    justify-content: center;
+    display: block;
+    text-align: center;
+    margin: 4rem 14rem;
+    width: 60%;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    padding: 20px;
+    height: 35%;
+}
+
+.body{
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.label{
+        display: block;
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+}
+
+input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff; /* Change the border color when focused */
+}
+
+button{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #03284e;
+    border: none;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+button:hover{
+    background-color: #093158;
+}
+
+table{
+    text-align: center;
+    justify-content: center;
+    margin-left: 70px;
+    margin-top: 3rem;
+}
+
+table thead td{
+    padding: 0.5rem 2rem;
+    color: goldenrod;
+    background-color: black;
+}
+
+table tbody td{
+    padding: 0.3rem 1rem;
+    color: black;
+    background-color: #fff;
+}

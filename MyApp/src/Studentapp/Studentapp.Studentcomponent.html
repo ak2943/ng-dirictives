@@ -1,0 +1,60 @@
+<h1 *ngIf="showheading"> {{title}}</h1>
+
+<ng-container *ngIf="!btn_submit; else show">
+
+<div class="head">
+ 
+  <div class="label">
+Name :<input type="text" placeholder="Enter Name" [(ngModel)]="studObj.Name" required><br/><br/></div>
+  <div class="label">
+   
+Email :<input type="text" placeholder="Enter Email" [(ngModel)]="studObj.Email"  required><br/><br/></div>
+  <div class="label">
+Age    :<input type="number" placeholder="Enter Age" [(ngModel)]="studObj.Age" required><br/><br/></div>
+  <div class="label">
+Address:<input type="text" placeholder="Enter Address" [(ngModel)]="studObj.Address" required><br/><br/></div>
+  <div class="label">
+Phone  :<input type="number" placeholder="Enter Phone No." [(ngModel)]="studObj.Phone" required><br/><br/></div>
+
+<!-- {{studObj.Name}}
+{{studObj.Dept}}
+{{studObj.Age}} -->
+<button (click)="Add()">{{ btn_value }}</button>
+
+<button (click)="clear()">Clear</button>
+<button (click)="submit()">Registered-students</button>
+
+</div>
+
+</ng-container>
+
+<ng-template #show>
+<div  class="body">
+  <h1>Students Information</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Age</td>
+      <td>Address</td>
+      <td>Phone</td>
+      <td>Edit</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of arrayObjs">
+      <td>{{i.Name}}</td>
+      <td>{{i.Email}}</td>
+      <td>{{i.Age}}</td>
+      <td>{{i.Address}}</td>
+      <td>{{i.Phone}}</td>
+      <td><a href="javascript:void(0)" (click)="edit(i)" >Edit</a></td>
+      <td><a href="javascript:void(0)" (click)="delete(i)" >Delete</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</ng-template>
+
